@@ -6,14 +6,6 @@ PROFILE_CHOICES=[
     ('pr', 'PR Pro')
 ]
 # Create your models here.
-class School(models.Model):
-	name = models.CharField(max_length = 64)
-	principal = models.CharField(max_length = 64)
-	location = models.TextField()
-
-	def __str__(self):
-		return self.name
-		
 class User(AbstractUser):
 	role = models.CharField(max_length = 16, choices=PROFILE_CHOICES, null=True)
 
@@ -28,3 +20,11 @@ class Jr(models.Model):
 	def __str__(self):
 		return self.user.username
 
+class School(models.Model):
+	name = models.CharField(max_length = 64)
+	principal = models.CharField(max_length = 64)
+	location = models.TextField()
+	pr = models.ForeignKey(Pr,on_delete=models.CASCADE,null=True)
+
+	def __str__(self):
+		return self.name

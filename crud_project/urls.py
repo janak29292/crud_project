@@ -23,4 +23,7 @@ urlpatterns = [
     path('school/', include('crud_app.urls')),
     path('',HelloView.as_view()),
     path('api-token-auth/', obtain_jwt_token, name='api_token_auth'),
+    path('auth/', include('rest_framework_social_oauth2.urls')),
+    path('authpro/',include('oauth2_provider.urls')),
+    path('socia/', include('social_django.urls', namespace='socia'))
 ]

@@ -5,3 +5,4 @@ class SchoolSerializer(ModelSerializer):
 	class Meta:
 		model = School
 		fields = ('__all__')
+		depth = 2
