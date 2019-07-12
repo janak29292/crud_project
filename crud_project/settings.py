@@ -109,6 +109,9 @@ DATABASES = {
     }
 }
 
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '795757530110-qocbvh91dg42qv200fmanjt2udiv8bd7.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '69FoAhtYbSVCK_vtNgqcVvMN'
+
 AUTH_USER_MODEL = 'crud_app.User'
 
 # Password validation
